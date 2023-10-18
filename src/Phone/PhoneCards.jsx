@@ -4,7 +4,7 @@ import swal from 'sweetalert';
 
 const PhoneCards = ({phone}) => {
     const handleFavorite=()=>{
-        console.log(phone)
+        // console.log(phone)
         const addFavoritesArray=[];
 
         const favoritesItems = JSON.parse(localStorage.getItem('favorite'))
@@ -17,7 +17,7 @@ const PhoneCards = ({phone}) => {
         else{
 
             const isExists = favoritesItems.find(phone=>phone.id == id)
-            console.log(isExists);
+            // console.log(isExists);
 
             if(!isExists){
             addFavoritesArray.push(...favoritesItems, phone)
@@ -30,7 +30,7 @@ const PhoneCards = ({phone}) => {
         }
 
     }
-    console.log(phone)
+    // console.log(phone)
     const {id, phone_name, brand_name, rating,price, image}= phone || {}
     return (
         <div className="flex justify-center items-center h-screen">

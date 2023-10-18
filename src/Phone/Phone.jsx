@@ -8,10 +8,10 @@ const Phone = () => {
     const [phone, setPhone]= useState();
 
     const {id} = useParams()
-    console.log(id)
+    // console.log(id)
 
     const phones= useLoaderData()
-    console.log(phones);
+    // console.log(phones);
 
     useEffect(()=>{
         const findPhone = phones?.find(phone => phone.id == id);
